@@ -191,8 +191,6 @@ with st.sidebar:
     st.markdown("---")
     uploaded = st.file_uploader("Upload heart.csv", type=["csv"])
     st.markdown("---")
-    use_pretrained = st.checkbox("🔄 Use Pre-trained Model", value=True)
-    st.markdown("---")
     page = st.radio(
         "Navigate",
         ["📊 Data Explorer", "🤖 Model Training", "🔬 Prediction", "📥 Export"],
