@@ -268,7 +268,7 @@ elif page == "🤖 Model Training":
         st.success(f"Training complete. Best model: **{best_name}**")
 
     
-        st.dataframe(summary.style.highlight_max(subset=["Accuracy", "ROC AUC"], color="#0d6efd44"), use_container_width=True)
+       
 
         st.markdown("#### ROC Curves")
         fig, ax = plt.subplots()
