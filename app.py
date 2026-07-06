@@ -267,18 +267,7 @@ elif page == "🤖 Model Training":
         st.session_state.feature_cols = list(X.columns)
         st.success(f"Training complete. Best model: **{best_name}**")
 
-    if st.session_state.models_trained:
-        results = st.session_state.models_trained
-        st.markdown("#### Model Comparison")
-        summary = pd.DataFrame(
-            {
-                "Model": list(results.keys()),
-                "Accuracy": [results[n]["acc"] for n in results],
-                "ROC AUC": [results[n]["auc"] for n in results],
-                "CV Mean": [results[n]["cv_mean"] for n in results],
-                "CV Std": [results[n]["cv_std"] for n in results],
-            }
-        )
+    
         st.dataframe(summary.style.highlight_max(subset=["Accuracy", "ROC AUC"], color="#0d6efd44"), use_container_width=True)
 
         st.markdown("#### ROC Curves")
