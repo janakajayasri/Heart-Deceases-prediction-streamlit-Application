@@ -1,7 +1,4 @@
-"""
-Heart Disease Prediction — Advanced Streamlit App
-Based on: Heart_Disease_Prediction.ipynb
-"""
+
 
 import io
 import warnings
